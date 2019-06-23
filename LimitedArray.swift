@@ -1,6 +1,9 @@
 struct LimitedArray<T> {
     private(set) var storage: [T] = [T]()
     public let maxSize: Int
+    public var count: Int {
+        return storage.count
+    }    
 
     /// creates an empty array
     public init(maxSize: Int) {
